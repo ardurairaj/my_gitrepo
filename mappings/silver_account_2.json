@@ -1,0 +1,35 @@
+{
+  "source_catalog": "pluto_bronze_dev",
+  "source_schema": "src_data",
+  "source_table": "account_2",
+  "target_catalog": "mycatalog",
+  "target_schema": "",
+  "target_table": "silver_account_2",
+  "table_comment": "",
+  "columns": [
+    {
+      "source_column": "customer_id",
+      "target_column": "customer_id",
+      "data_type": "string",
+      "comment": ""
+    },
+    {
+      "source_column": "customer_name",
+      "target_column": "customer_name",
+      "data_type": "string",
+      "comment": ""
+    },
+    {
+      "source_column": "customer_contact_number",
+      "target_column": "customer_contact_number",
+      "data_type": "string",
+      "comment": ""
+    },
+    {
+      "source_column": "customer_mobile_number",
+      "target_column": "customer_mobile_number",
+      "data_type": "string",
+      "comment": ""
+    }
+  ]
+}

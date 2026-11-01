@@ -1,0 +1,26 @@
+resources:
+  jobs:
+    silver_account_2_job:
+      name: silver_load_silver_account_2
+      tasks:
+      - task_key: create_silver_account_2
+        sql_task:
+          warehouse_id: <warehouse_id>
+          file:
+            path: ../ddl/silver/silver_account_2.sql
+      - task_key: load_silver_account_2
+        depends_on:
+        - task_key: create_silver_account_2
+        sql_task:
+          warehouse_id: <warehouse_id>
+          file:
+            path: ../dml/silver/silver_account_2.sql
+      queue:
+        enabled: true
+      tags:
+        source_system: redshift
+        layer: silver
+      schedule:
+        quartz_cron_expression: 0 0 2 * * ?
+        timezone_id: UTC
+        pause_status: UNPAUSED
