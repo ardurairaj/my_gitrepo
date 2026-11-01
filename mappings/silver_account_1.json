@@ -1,0 +1,35 @@
+{
+  "source_catalog": "pluto_bronze_dev",
+  "source_schema": "src_data",
+  "source_table": "account_1",
+  "target_catalog": "mycatalog",
+  "target_schema": "",
+  "target_table": "silver_account_1",
+  "table_comment": "",
+  "columns": [
+    {
+      "source_column": "customer_id",
+      "target_column": "customer_id",
+      "data_type": "string",
+      "comment": "This column likely represents a unique identifier for a customer account in the system.update"
+    },
+    {
+      "source_column": "customer_name",
+      "target_column": "customer_name",
+      "data_type": "string",
+      "comment": "This column likely represents the name of the customer associated with an account in the development data set."
+    },
+    {
+      "source_column": "customer_contact_number",
+      "target_column": "customer_contact_number",
+      "data_type": "string",
+      "comment": "customer contact number"
+    },
+    {
+      "source_column": "customer_mobile_number",
+      "target_column": "customer_mobile_number",
+      "data_type": "string",
+      "comment": ""
+    }
+  ]
+}
